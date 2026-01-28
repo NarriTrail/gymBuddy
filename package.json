@@ -8,7 +8,9 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "clean":"cd android && ./gradlew clean && cd .."
+    "clean": "cd android && gradlew clean && cd ..",
+    "releaseBuild:a": "cd android && gradlew assembleReleasse",
+    "resetrun": "npx react-native start --reset-cache"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^2.1.2",
@@ -20,13 +22,19 @@
     "@reduxjs/toolkit": "^2.6.1",
     "react": "18.2.0",
     "react-native": "0.74.4",
+    "react-native-android-location-enabler": "^2.0.1",
+    "react-native-device-info": "^14.0.4",
     "react-native-gesture-handler": "^2.24.0",
+    "react-native-paper": "^5.13.1",
+    "react-native-permissions": "^5.3.0",
     "react-native-raw-bottom-sheet": "^3.0.0",
     "react-native-safe-area-context": "^5.3.0",
     "react-native-screens": "^4.9.2",
     "react-native-svg": "^15.11.2",
     "react-native-vector-icons": "^10.2.0",
-    "react-redux": "^9.2.0"
+    "react-native-video": "^6.12.0",
+    "react-redux": "^9.2.0",
+    "socket.io-client": "^4.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
