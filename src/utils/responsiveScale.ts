@@ -32,7 +32,7 @@ export const getFontSize = (fontSize: number) => {
 
 let subscribe: any;
 const listenOrientationChange = (that: any) => {
-  let subscribe = Dimensions.addEventListener('change', newDimensions => {
+  subscribe = Dimensions.addEventListener('change', newDimensions => {
     screenWidth = newDimensions.window.width;
     screenHeight = newDimensions.window.height;
 
