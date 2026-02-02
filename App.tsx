@@ -9,7 +9,7 @@ import {store} from './src/redux/store';
 const App = () => {
   // const name='sam'
   useEffect(() => {
-    console.log('===========app rendered===========');
+    console.log('===========app rendered=====gym buddy======');
   }, []);
   return (
     <Provider store={store}>
