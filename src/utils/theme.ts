@@ -1,4 +1,4 @@
-import { Dimensions } from "react-native";
+import { Dimensions, useColorScheme } from "react-native";
 
 export const screenWidth = Dimensions.get('screen').width;
 export const screenHeight = Dimensions.get('screen').height;
@@ -10,6 +10,9 @@ export const colors={
     black:'#000000',
     white:'#ffffff',
     darkgray2:'#333333',
+    rgbaWhite: (opacity:number) => `rgba(255,255,255,${opacity})`,
+    rgbaBlack: (opacity:number) => `rgba(0,0,0,${opacity})`,
+
 }
 
 export const fontSizes = {
@@ -23,4 +26,20 @@ export const fontSizes = {
     xsmall: 10,
     xmini: 9,
     tiny: 8,
+}
+
+export const fonts={
+    regular:'Rubik-Regular',
+    medium:'Rubik-Medium',
+    semiBold:'Rubik-SemiBold',
+    bold:'Rubik-Bold',
+    light:'Rubik-Light'
+}
+export const useThemeColors=()=>{
+    const isDarkTheme=useColorScheme()
+    console.log("isDarkTheme",isDarkTheme)
+    return{
+        whiteBlack:isDarkTheme==='dark'?'#fff':'#000'
+    }
+
 }
