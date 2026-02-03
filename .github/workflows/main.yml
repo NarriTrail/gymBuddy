@@ -5,6 +5,7 @@ on:
       - develop
       - main
     paths-ignore:
+      -"src/**"
       - "backend/**"
       - "index.js"
   pull_request:
