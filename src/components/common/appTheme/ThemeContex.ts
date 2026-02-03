@@ -1,11 +1,11 @@
-import { StyleSheet, Text, useColorScheme, View } from 'react-native'
-import React from 'react'
+// import React from 'react';
+import {  useColorScheme} from 'react-native';
 
 const ThemeContex = () => {
-const colorTheme= useColorScheme()
+  const colorTheme = useColorScheme();
+  console.log('color',colorTheme)
+};
 
-}
+export default ThemeContex;
 
-export default ThemeContex
-
-const styles = StyleSheet.create({})
+// const styles = StyleSheet.create({});
