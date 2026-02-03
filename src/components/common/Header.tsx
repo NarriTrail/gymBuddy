@@ -1,20 +1,24 @@
-import { StyleSheet, Text, View, TouchableOpacity, Platform } from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Platform} from 'react-native';
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
-const Header = ({ title }) => {
+const Header = ({title}) => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+      <TouchableOpacity
+        onPress={() => navigation.goBack()}
+        style={styles.backButton}>
         <View style={styles.iconWrapper}>
           <AntDesign name="arrowleft" size={20} color="#fff" />
         </View>
       </TouchableOpacity>
 
-      <Text style={styles.title} numberOfLines={1}>{title}</Text>
+      <Text style={styles.title} numberOfLines={1}>
+        {title}
+      </Text>
     </View>
   );
 };
@@ -31,7 +35,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#4a90e2', // Nice blue shade
     elevation: 6,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
+    shadowOffset: {width: 0, height: 4},
     shadowOpacity: 0.2,
     shadowRadius: 6,
   },

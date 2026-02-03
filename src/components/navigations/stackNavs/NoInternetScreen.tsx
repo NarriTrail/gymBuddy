@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Text, View} from 'react-native';
+import React from 'react';
 
 const NoInternetScreen = () => {
   return (
     <View>
       <Text>NoInternetScreen</Text>
     </View>
-  )
-}
+  );
+};
 
-export default NoInternetScreen
+export default NoInternetScreen;
 
-const styles = StyleSheet.create({})
+// const styles = StyleSheet.create({});

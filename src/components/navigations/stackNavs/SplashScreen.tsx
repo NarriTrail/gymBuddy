@@ -33,7 +33,7 @@
 //     //   const timer = setTimeout(() => {
 //     //     navigation.replace('TabNavigation'); // Replace 'HomeScreen' with your actual next screen's name
 //     //   }, 2000);
-  
+
 //     //   // Cleanup timer to avoid memory leaks
 //     //   return () => clearTimeout(timer);
 //     // }, [navigation]);
@@ -82,9 +82,9 @@
 //   }
 // });
 
-import { Animated, ImageBackground, StyleSheet, Text, View } from 'react-native';
-import React, { useEffect, useRef } from 'react';
-import { useNavigation } from '@react-navigation/native';
+import {Animated, ImageBackground, StyleSheet, Text, View} from 'react-native';
+import React, {useEffect, useRef} from 'react';
+import {useNavigation} from '@react-navigation/native';
 
 interface navigationProps {
   navigate: (screen: string) => void;
@@ -114,23 +114,27 @@ const SplashScreen = () => {
       }),
     ]).start();
   }, []);
-    useEffect(() => {
-      // Navigate to the next screen after 2 seconds
-      const timer = setTimeout(() => {
-        navigation.replace('TabNavigation'); // Replace 'HomeScreen' with your actual next screen's name
-      }, 2000);
-  
-      // Cleanup timer to avoid memory leaks
-      return () => clearTimeout(timer);
-    }, [navigation]);
+  useEffect(() => {
+    // Navigate to the next screen after 2 seconds
+    const timer = setTimeout(() => {
+      navigation.replace('TabNavigation'); // Replace 'HomeScreen' with your actual next screen's name
+    }, 2000);
+
+    // Cleanup timer to avoid memory leaks
+    return () => clearTimeout(timer);
+  }, [navigation]);
   return (
     <View style={styles.container}>
-      <Animated.View style={[styles.animatedContainer, { transform: [{ scale: scaleAnim }], }]}>
+      <Animated.View
+        style={[styles.animatedContainer, {transform: [{scale: scaleAnim}]}]}>
         <ImageBackground
-          source={{ uri: 'https://www.shopperadvocate.com/wp-content/uploads/2021/03/best-fitness-apps-for-featured.jpg' }}
-          style={styles.backgroundImage}
-        >
-          <Text style={styles.tagline}>Your Journey to Fitness Starts Here</Text>
+          source={{
+            uri: 'https://www.shopperadvocate.com/wp-content/uploads/2021/03/best-fitness-apps-for-featured.jpg',
+          }}
+          style={styles.backgroundImage}>
+          <Text style={styles.tagline}>
+            Your Journey to Fitness Starts Here
+          </Text>
         </ImageBackground>
       </Animated.View>
     </View>
